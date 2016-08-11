@@ -16,75 +16,47 @@
      </LinearLayout>
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-   <LinearLayout
-       android:onClick="click"
-       android:id="@+id/main"
-       android:layout_weight="1"
-       android:orientation="vertical"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content">
-       <ImageView
-           android:layout_gravity="center_horizontal"
+<RadioGroup
+    android:id="@+id/rg_radiogroup"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+       <RadioButton
+           android:layout_weight="1"
+           android:button="@null"
+           android:textColor="@drawable/text_color"
+           android:background="@null"
+           android:drawableTop="@drawable/color"
+           android:gravity="center_horizontal"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:src="@drawable/shouye"
-           />
-       <TextView
-           android:layout_gravity="center_horizontal"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="@string/shouye"
-           />
-   </LinearLayout>
-
-        <LinearLayout
-            android:onClick="click"
-            android:id="@+id/publish"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_gravity="center_horizontal"
+           android:text="@string/shouye" />
+            <RadioButton
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@null"
+                android:textColor="@drawable/text_color"
+                android:drawableTop="@drawable/color2"
+                android:gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/fabu"
-                />
-            <TextView
-                android:layout_gravity="center_horizontal"
+                android:text="@string/fabu" />
+            <RadioButton
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@null"
+                android:textColor="@drawable/text_color"
+                android:drawableTop="@drawable/color3"
+                android:gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fabu"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:onClick="click"
-            android:id="@+id/mine"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/wode"
-                />
-            <TextView
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wode"
-                />
-        </LinearLayout>
-
-
-
+                android:text="@string/wode" />
+</RadioGroup>
     </LinearLayout>
+
+
 </LinearLayout>
