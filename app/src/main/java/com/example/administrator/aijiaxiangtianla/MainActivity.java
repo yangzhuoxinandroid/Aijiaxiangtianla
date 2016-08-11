@@ -17,5 +17,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
+    public void click(View view){
+        switch (view.getId()){
+            case R.id.main:
+
+                break;
+            case R.id.publish:
+
+                break;
+            case R.id.mine:
+
+                break;
+        }
+    }
 
 }
