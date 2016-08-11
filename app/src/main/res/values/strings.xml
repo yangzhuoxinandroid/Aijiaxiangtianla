@@ -2,4 +2,7 @@
     <string name="app_name">Aijiaxiangtianla</string>
     <string name="action_settings">Settings</string>
     <string name="dsy">Dsy</string>
+    <string name="shouye">首页</string>
+    <string name="fabu">发布</string>
+    <string name="wode">我的</string>
 </resources>
