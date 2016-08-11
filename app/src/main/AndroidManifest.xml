@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.lovehome.HomeMainActivity"></activity>
+        <activity android:name="com.example.administrator.mine.MineActivity"></activity>
     </application>
 
 </manifest>

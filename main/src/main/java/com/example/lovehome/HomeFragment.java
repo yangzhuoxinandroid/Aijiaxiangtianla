@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.adapter.AdapteHome;
+import com.example.lovehome.R;
 
 import org.xutils.x;
 
@@ -46,7 +47,7 @@ public class HomeFragment extends Fragment {
 
         init();
         setview();
-        setviewLayout();
+//        setviewLayout();
         setAuto();
         handler=new Handler(){
             public void handleMessage(Message msg){

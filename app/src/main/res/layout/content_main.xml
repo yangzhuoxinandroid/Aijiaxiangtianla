@@ -21,11 +21,13 @@
         android:orientation="horizontal"
         >
 <RadioGroup
+    android:onClick="click"
     android:id="@+id/rg_radiogroup"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
        <RadioButton
+           android:id="@+id/main"
            android:layout_weight="1"
            android:button="@null"
            android:textColor="@drawable/text_color"
@@ -36,6 +38,7 @@
            android:layout_height="wrap_content"
            android:text="@string/shouye" />
             <RadioButton
+                android:id="@+id/publish"
                 android:layout_weight="1"
                 android:button="@null"
                 android:background="@null"
@@ -46,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/fabu" />
             <RadioButton
+                android:id="@+id/mine"
                 android:layout_weight="1"
                 android:button="@null"
                 android:background="@null"
