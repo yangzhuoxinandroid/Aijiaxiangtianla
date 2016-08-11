@@ -1,15 +1,24 @@
 package com.example.lovehome;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.example.adapter.AdapteHome;
 
 import org.xutils.x;
 
@@ -26,6 +35,8 @@ public class HomeFragment extends Fragment {
     ViewPager vg_ViewPager;
     int index;
     int[] img;
+//    int position=0;
+    Handler handler;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -34,6 +45,18 @@ public class HomeFragment extends Fragment {
 
 
         init();
+        setview();
+        setviewLayout();
+        setAuto();
+        handler=new Handler(){
+            public void handleMessage(Message msg){
+                //super.handleMessage(msg);
+                if(msg.what==0){//判断是不是想要的线程发过来的通知
+                    vg_ViewPager.setCurrentItem(index++);//设置图片加一 滑动
+                    //hde.sendEmptyMessageAtTime(0, 2000);
+                }
+            }
+        };
 
 
         return HomeView;
@@ -64,35 +87,80 @@ public class HomeFragment extends Fragment {
         return imgview;
     }
 
-//    public void setview() {
-//        final List<View> vplist = new ArrayList<View>();// 存放视图的容器
-//        for (int i = 0; i < 5; i++) {
-//            vplist.add(imgData(i + 1));
-//        }
-//        // vplist.add(data(1));
-//        // vplist.add(data(2));
-//        vg.setAdapter(new AdapteHome(vplist));// 适配器做了更改
-//        vg.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//
-//            @Override
-//            public void onPageSelected(int arg0) {
-//                index = arg0;
-//                setIndex(arg0 % vplist.size());
-//            }
-//            @Override
-//            public void onPageScrolled(int arg0, float arg1, int arg2) {
-//                // TODO Auto-generated method stub
-//            }
-//            @Override
-//            public void onPageScrollStateChanged(int arg0) {
-//                // TODO Auto-generated method stub
-//            }
-//        });
-//    }
+    public void setview() {
+        final List<View> vplist = new ArrayList<View>();// 存放视图的容器
+        for (int i = 0; i < 2; i++) {
+            vplist.add(imgData(i + 1));
+        }
+        vg_ViewPager.setAdapter(new AdapteHome(vplist));// 适配器做了更改
+        vg_ViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
+            @Override
+            public void onPageSelected(int arg0) {
+                index = arg0;
+                setIndex(arg0 % vplist.size());
+            }
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+                // TODO Auto-generated method stub
+            }
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+                // TODO Auto-generated method stub
+            }
+        });
+    }
 
+    public void setIndex(int position) {
+        for (int i = 0; i < linearLayout.getChildCount(); i++) {
+            TextView tvs = (TextView) linearLayout.getChildAt(i);
+            if (i == position) {
+                tvs.setBackgroundColor(Color.parseColor("#ff0000"));
+            } else {
+                tvs.setBackgroundColor(Color.parseColor("#AFAFAF"));
+            }
+        }
+    }
 
+    public void setviewLayout() {
+        // 拿到图片的宽度和高度
+        // 拿到屏幕的宽度
+        Drawable drawable = getResources().getDrawable(R.drawable.ten);
+        int gao = drawable.getIntrinsicHeight();// 图片的高度
+        int kuan = drawable.getIntrinsicWidth();// 图片的宽度
+        Log.i("宽和高", gao + "/" + kuan);
+        DisplayMetrics m = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(m);
+        int PW = m.widthPixels;// 屏幕的宽度
+        Log.i("屏幕的宽度", "" + PW);
+        // // 算出相对布局的高度
+        int Kg = PW * gao / kuan;
+        Log.i("计算后的数", "" + Kg);
+        // // 重新设置高度和宽度
+        RelativeLayout.LayoutParams ll = (RelativeLayout.LayoutParams) relativeLayout.getLayoutParams();
+        ll.height = Kg;
+        relativeLayout.setLayoutParams(ll);
+    }
 
+    /**
+     * 消息通知主线程换图片
+     */
+    public void setAuto(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(true){
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    handler.sendEmptyMessage(0);//设置标识
+                }
+
+            }
+        }).start();
+    }
 
 
 }
