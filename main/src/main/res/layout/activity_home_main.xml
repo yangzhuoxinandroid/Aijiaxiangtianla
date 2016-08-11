@@ -9,10 +9,41 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/find"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/changsha"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_white_down"
+            />
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_shape"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+            <EditText
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:layout_width="170dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:drawableLeft="@drawable/ic_search"
+                android:background="@null"
+                android:maxLength="20"
+                android:hint="@string/find" />
+
+        </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
