@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#50C476</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="beijin_lv">#50C476</color>
+    <color name="beijin_hui">#E8E8E8</color>
+    <color name="ziti_hui">#808080</color>
+    <color name="ziti_hei">#000000</color>
+    <color name="ziti_lv">#50C476</color>
+    <color name="ziti_bai">#ffffff</color>
+    <color name="search">#33ffffff</color>
+    <color name="black_xian">#bbbbbb</color>
+    <color name="ajx_price">#FF8D2A</color>
+</resources>

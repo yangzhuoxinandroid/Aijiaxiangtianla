@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">mine</string>
+    <string name="wode_dianjidenglu">请点击登录</string>
+    <string name="wode_wodefabu">我的发布</string>
+    <string name="wode_wodecaogao">我的草稿</string>
+    <string name="wode_wodeshoucang">我的收藏</string>
+    <string name="wode_wodexiaoxi">我的消息</string>
+    <string name="wode_wodepingtai">平台声明</string>
+    <string name="wode_wodeaijiaxiang">关于“爱家乡”</string>
+    <string name="wode_wodefenxiang">分享软件</string>
+    <string name="wode_wodexiugaimima">修改密码</string>
+    <string name="wode_wodehuancun">清除缓存</string>
+    <string name="wode_wodetuichudenglu">退出登录</string>
+
 
 </resources>
