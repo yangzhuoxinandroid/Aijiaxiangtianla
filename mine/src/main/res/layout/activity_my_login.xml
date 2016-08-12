@@ -24,8 +24,9 @@
             android:layout_width="12dp"
             android:layout_height="25dp"
             android:clickable="true"
+            android:onClick="MyOnclick"
             android:layout_marginLeft="20dp"
-            android:id="@+id/img_login_back_icon"
+            android:id="@+id/denglu_back"
             android:src="@drawable/back_icon" />
 
         <TextView
@@ -157,7 +158,7 @@
                 android:background="#ffe8e8e8" />
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/denglu_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10.0dip"
@@ -165,6 +166,7 @@
                 android:layout_marginTop="20.0dip"
                 android:background="@drawable/btn_large_green"
                 android:text="登录"
+                android:onClick="MyOnclick"
                 android:textColor="@android:color/white"
                 android:textSize="16.0dip" />
 
@@ -176,11 +178,12 @@
                 android:layout_marginTop="15.0dip">
 
                 <TextView
-                    android:id="@+id/btn_register"
+                    android:id="@+id/denglu_yonghuzhuce"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:clickable="true"
+                    android:onClick="MyOnclick"
                     android:paddingBottom="20.0dip"
                     android:paddingRight="20.0dip"
                     android:paddingTop="20.0dip"
@@ -189,12 +192,13 @@
                     android:textSize="16.0dip" />
 
                 <TextView
-                    android:id="@+id/btn_forget_password"
+                    android:id="@+id/denglu_wangjimima"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:background="@android:color/transparent"
                     android:clickable="true"
+                    android:onClick="MyOnclick"
                     android:paddingBottom="20.0dip"
                     android:paddingRight="20.0dip"
                     android:paddingTop="20.0dip"

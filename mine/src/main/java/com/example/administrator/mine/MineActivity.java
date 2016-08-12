@@ -5,29 +5,16 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-
 public class MineActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getSupportActionBar().hide();  //去掉标题栏
         setContentView(R.layout.activity_mine);
-
-//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-//        MineFragment  mineFragment = new MineFragment();
-//        ft.replace(R.id.lvtihuan,mineFragment,"Introduce");
-//        ft.commit();
     }
     public void MyOnclick(View view) {
-  //      FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         int i = view.getId();
         //点击登录
         if (i == R.id.wode_qingdenglu) {
-//            LoginFragment  loginFragment = new LoginFragment();
-//            ft.replace(R.id.conten,loginFragment,"Introduce");
-//            ft.commit();
             Intent intent=new Intent(MineActivity.this,MyLoginActivity.class);
             startActivity(intent);
         }

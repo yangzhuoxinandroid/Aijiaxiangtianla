@@ -17,7 +17,10 @@
         <activity android:name=".MyguanyuajxActivity" />
         <activity android:name=".MyfenxiangActivity" />
         <activity android:name=".MyxiugaimmActivity" />
-        <activity android:name=".MyqingchuActivity"></activity>
+        <activity android:name=".MyqingchuActivity" />
+        <activity android:name=".MyzhuceActivity" />
+        <activity android:name=".MywjmmActivity" />
+        <activity android:name=".MyyhzlActivity"></activity>
     </application>
 
 </manifest>
