@@ -15,9 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.activity.LunboActivity;
 import com.example.adapter.AdapteHome;
 import com.example.lovehome.R;
 
@@ -37,16 +39,15 @@ public class HomeFragment extends Fragment {
     int index;
     int[] img;
     Handler handler;
+    ListView home_listview;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         HomeView=inflater.inflate(R.layout.activity_home_main,container,false);
-        x.view().inject(this,HomeView);
 
 
         init();
         setview();
-        setviewLayout();
         setAuto();
         handler=new Handler(){
             public void handleMessage(Message msg){
@@ -58,7 +59,8 @@ public class HomeFragment extends Fragment {
             }
         };
 
-
+       LunboActivity lunboActivity=new LunboActivity();
+        home_listview.addHeaderView(lunboActivity.getHeadView());
         return HomeView;
     }
 
@@ -69,6 +71,8 @@ public class HomeFragment extends Fragment {
         relativeLayout = (RelativeLayout)HomeView.findViewById(R.id.RelativeLayout);
         vg_ViewPager = (ViewPager)HomeView.findViewById(R.id.vg_ViewPager);
         linearLayout = (LinearLayout)HomeView.findViewById(R.id.LinearLayout);
+        //listview的id
+        home_listview=(ListView)HomeView.findViewById(R.id.home_listview);
     }
 
     public ImageView imgData(int i) {
@@ -86,7 +90,6 @@ public class HomeFragment extends Fragment {
         }
         return imgview;
     }
-
     public void setview() {
         final List<View> vplist = new ArrayList<View>();// 存放视图的容器
         for (int i = 0; i < 2; i++) {
@@ -110,7 +113,6 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-
     public void setIndex(int position) {
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             TextView tvs = (TextView) linearLayout.getChildAt(i);
@@ -121,27 +123,6 @@ public class HomeFragment extends Fragment {
             }
         }
     }
-
-    public void setviewLayout() {
-        // 拿到图片的宽度和高度
-        // 拿到屏幕的宽度
-        Drawable drawable = getResources().getDrawable(R.drawable.ten);
-        int gao = drawable.getIntrinsicHeight();// 图片的高度
-        int kuan = drawable.getIntrinsicWidth();// 图片的宽度
-        Log.i("宽和高", gao + "/" + kuan);
-        DisplayMetrics m = new DisplayMetrics();
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(m);
-        int PW = m.widthPixels;// 屏幕的宽度
-        Log.i("屏幕的宽度", "" + PW);
-        // // 算出相对布局的高度
-        int Kg = PW * gao / kuan;
-        Log.i("计算后的数", "" + Kg);
-        // // 重新设置高度和宽度
-        RelativeLayout.LayoutParams ll = (RelativeLayout.LayoutParams) relativeLayout.getLayoutParams();
-        ll.height = Kg;
-        relativeLayout.setLayoutParams(ll);
-    }
-
     /**
      * 消息通知主线程换图片
      */
@@ -161,6 +142,7 @@ public class HomeFragment extends Fragment {
             }
         }).start();
     }
+
 
 
 }

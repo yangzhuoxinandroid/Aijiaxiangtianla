@@ -2,4 +2,14 @@
     <string name="app_name">main</string>
     <string name="find">查找商户</string>
     <string name="changsha">长沙</string>
+    <string name="laoxiang">老乡会</string>
+    <string name="hosthome">同乡异城，互帮互助</string>
+    <string name="waimai">外卖汇</string>
+    <string name="one_phone">一个电话，马上到家</string>
+    <string name="first_page">首页</string>
+    <string name="guangchang">明珠广场</string>
+    <string name="ktv">东方明珠ktv</string>
+    <string name="tea">茶馆</string>
+    <string name="open_time">19:00</string>
+    <string name="end_time">01:00</string>
 </resources>
