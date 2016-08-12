@@ -109,7 +109,7 @@
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
             android:hint="请输入新密码"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:paddingLeft="10.0dip"
             android:textSize="16.0dip" />
     </LinearLayout>
@@ -139,7 +139,7 @@
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
             android:hint="再次输入新密码"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:paddingLeft="10.0dip"
             android:textSize="16.0dip" />
     </LinearLayout>
