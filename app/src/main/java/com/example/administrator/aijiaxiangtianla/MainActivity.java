@@ -54,7 +54,6 @@ public class MainActivity extends TabActivity {
         //选中的时候显示哪个界面
         t1.setContent(new Intent(this, HomeMainActivity.class));
         host.addTab(t1);
-
 //        TabHost.TabSpec t2=  host.newTabSpec("发布");//创建一个选项卡，参数：就只是一个标记没有任何意义
 //        //给文字或者图标
 //        View view2=inflater.inflate(R.layout.cone, null);
