@@ -20,7 +20,7 @@ import com.example.lovehome.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LunboActivity extends AppCompatActivity {
+class LunboActivity extends AppCompatActivity {
     public List<LunboEntity> list;
     public ViewPager view;
     public List<ListItemEntity> like;

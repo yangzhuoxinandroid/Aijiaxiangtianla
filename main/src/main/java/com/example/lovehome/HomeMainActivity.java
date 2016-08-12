@@ -25,7 +25,7 @@ public class HomeMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainone_layout);
+        setContentView(R.layout.activity_home_main);
 //        FragmentTransaction ft =getSupportFragmentManager().beginTransaction();
 //   com.example.lovehome.HomeFragment homeFragment=new com.example.lovehome.HomeFragment();
 //        ft.replace(R.id.ly,homeFragment,"ss");
