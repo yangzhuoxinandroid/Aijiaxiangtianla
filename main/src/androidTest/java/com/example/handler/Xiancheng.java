@@ -1,14 +1,14 @@
 package com.example.handler;
 
-import com.example.lovehome.HomeMainActivity;
+import com.example.fragment.HomeFragment;
 
 public class Xiancheng implements Runnable {
 
 	@Override
 	public void run() {
-		HomeMainActivity homeMainActivity=new HomeMainActivity();
-		homeMainActivity.init();
-		homeMainActivity.setview();
+		HomeFragment homeFragment=new HomeFragment();
+		homeFragment.init();
+		homeFragment.setview();
 	}
 
 }

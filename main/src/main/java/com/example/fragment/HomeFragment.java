@@ -1,4 +1,4 @@
-package com.example.lovehome;
+package com.example.fragment;//package com.example.lovehome;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -36,7 +36,6 @@ public class HomeFragment extends Fragment {
     ViewPager vg_ViewPager;
     int index;
     int[] img;
-//    int position=0;
     Handler handler;
     @Nullable
     @Override
@@ -47,7 +46,7 @@ public class HomeFragment extends Fragment {
 
         init();
         setview();
-//        setviewLayout();
+        setviewLayout();
         setAuto();
         handler=new Handler(){
             public void handleMessage(Message msg){
