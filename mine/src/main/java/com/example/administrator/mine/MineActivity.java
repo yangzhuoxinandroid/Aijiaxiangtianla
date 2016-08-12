@@ -74,9 +74,9 @@ public class MineActivity extends AppCompatActivity {
             Intent intent=new Intent(MineActivity.this,MyqingchuActivity.class);
             startActivity(intent);
         }
-        //退出登录
-        else if (i == R.id.wode_tuichudenglu){
-
-        }
+//        //退出登录
+//        else if (i == R.id.wode_tuichudenglu){
+//
+//        }
     }
 }
