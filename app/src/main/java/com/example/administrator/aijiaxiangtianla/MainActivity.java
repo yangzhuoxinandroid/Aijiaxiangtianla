@@ -16,6 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.administrator.mine.MineActivity;
+import com.example.fragment.HomeFragment;
 import com.example.lovehome.HomeMainActivity;
 
 import java.net.InterfaceAddress;
@@ -39,10 +40,9 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
                     case R.id.main :
-                        Toast.makeText(MainActivity.this, "333", Toast.LENGTH_SHORT).show();
-                        Intent intent=new Intent();
-                        intent.setClass(MainActivity.this,HomeMainActivity.class);
-                        startActivity(intent);
+                        HomeFragment homeFragment=new HomeFragment();
+                        ft.replace(R.id.bottom_host,homeFragment,"homeFragment");
+                        ft.commit();
                         break;
                     case R.id.publish:
 
