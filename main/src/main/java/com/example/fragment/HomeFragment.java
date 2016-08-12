@@ -23,7 +23,6 @@ import com.example.activity.LunboActivity;
 import com.example.adapter.AdapteHome;
 import com.example.lovehome.R;
 
-import org.xutils.x;
 
 import java.util.ArrayList;
 import java.util.List;
