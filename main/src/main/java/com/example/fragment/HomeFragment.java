@@ -1,4 +1,4 @@
-package com.example.lovehome;
+package com.example.fragment;//package com.example.lovehome;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.adapter.AdapteHome;
+import com.example.lovehome.R;
 
 import org.xutils.x;
 
@@ -35,7 +36,6 @@ public class HomeFragment extends Fragment {
     ViewPager vg_ViewPager;
     int index;
     int[] img;
-//    int position=0;
     Handler handler;
     @Nullable
     @Override
