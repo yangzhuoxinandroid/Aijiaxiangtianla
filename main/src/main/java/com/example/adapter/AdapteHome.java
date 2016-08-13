@@ -18,16 +18,16 @@ public class AdapteHome extends PagerAdapter {
 
 	@Override
 	public void destroyItem(ViewGroup container, int position, Object object) {
-		container.removeView(vpList.get(position%vpList.size()));
+	 container.removeView(vpList.get(position%vpList.size()));
 		//container.removeView(vpList.get(position));
 	}
 
 	@Override
 	public Object instantiateItem(ViewGroup container, int position) {
 	container.addView(vpList.get(position%vpList.size()));
-		//container.addView(vpList.get(position));
+		// container.addView(vpList.get(position));
 		
-		return vpList.get(position%vpList.size());
+	return vpList.get(position%vpList.size());
 		//return vpList.get(position);
 	}
 	@Override

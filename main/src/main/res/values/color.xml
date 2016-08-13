@@ -6,5 +6,7 @@
     <color name="gray">#cccccc</color>
     <color name="orange">#EE7621</color>
     <color name="gray_one">#8B8B7A</color>
+    <color name="red">#ff0000</color>
     <color name="black">#000000</color>
+    <color name="backgroud">#EDEDED</color>
 </resources>

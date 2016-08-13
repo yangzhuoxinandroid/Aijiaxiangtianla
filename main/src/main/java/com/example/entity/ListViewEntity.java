@@ -7,7 +7,10 @@ import java.util.List;
  */
 public class ListViewEntity {
     /**
-     * list : [{"business_location":"望城县 高塘岭镇步行街A8栋4楼","child_category_id":11,"city_id":1,"detail_id":10,"detail_info":"基于影院设备之间的互联互通，每天24小时、全年365天无间断地为设备提供实时、专业的监控、预警和维护服务。目前，世纪美映数字电影设备监护系统已为今典院线、万达院线、新影联院线、比高国际等多家院线和影院提供服务，有效降低了由放映设备故障造成的维修费用和票房损失，显著提高观众满意度。","imgUrlList":[{"detail_id":10,"img_id":11,"img_url":"http://p0.meituan.net/320.0.a/deal/602f0d65070e5973c85aabff0fb6c6ac60545.jpg"}],"isApprove":0,"is_take_out":0,"merchant_name":"17.5影城（望城店）","parent_category_id":2,"per_capita_consumption":0,"phone":"0731-82021811","user_id":22},{"business_location":"望城县 高塘岭镇步行街A8栋4楼","child_category_id":11,"city_id":1,"detail_id":47,"detail_info":"基于影院设备之间的互联互通，每天24小时、全年365天无间断地为设备提供实时、专业的监控、预警和维护服务。目前，世纪美映数字电影设备监护系统已为今典院线、万达院线、新影联院线、比高国际等多家院线和影院提供服务，有效降低了由放映设备故障造成的维修费用和票房损失，显著提高观众满意度。","imgUrlList":[],"isApprove":0,"is_take_out":0,"merchant_name":"17.5影城（望城店）","parent_category_id":2,"per_capita_consumption":0,"phone":"0731-82021811","user_id":21}]
+     * list : [{"business_location":"望城县 高塘岭镇步行街A8栋4楼","child_category_id":11,
+     * "city_id":1,"detail_id":10,
+     * "detail_info":"基于影院设备之间的互联互通，每天24小时、全年365天无间断地为设备提供实时、专业的监控、预警和维护服务。目前，世纪美映数字电影设备监护系统已为今典院线、万达院线、新影联院线、比高国际等多家院线和影院提供服务，有效降低了由放映设备故障造成的维修费用和票房损失，显著提高观众满意度。",
+     * "imgUrlList":[{"detail_id":10,"img_id":11,"img_url":"http://p0.meituan.net/320.0.a/deal/602f0d65070e5973c85aabff0fb6c6ac60545.jpg"}],"isApprove":0,"is_take_out":0,"merchant_name":"17.5影城（望城店）","parent_category_id":2,"per_capita_consumption":0,"phone":"0731-82021811","user_id":22},{"business_location":"望城县 高塘岭镇步行街A8栋4楼","child_category_id":11,"city_id":1,"detail_id":47,"detail_info":"基于影院设备之间的互联互通，每天24小时、全年365天无间断地为设备提供实时、专业的监控、预警和维护服务。目前，世纪美映数字电影设备监护系统已为今典院线、万达院线、新影联院线、比高国际等多家院线和影院提供服务，有效降低了由放映设备故障造成的维修费用和票房损失，显著提高观众满意度。","imgUrlList":[],"isApprove":0,"is_take_out":0,"merchant_name":"17.5影城（望城店）","parent_category_id":2,"per_capita_consumption":0,"phone":"0731-82021811","user_id":21}]
      * msg : success
      * result : 200
      */
@@ -20,7 +23,8 @@ public class ListViewEntity {
      * city_id : 1
      * detail_id : 10
      * detail_info : 基于影院设备之间的互联互通，每天24小时、全年365天无间断地为设备提供实时、专业的监控、预警和维护服务。目前，世纪美映数字电影设备监护系统已为今典院线、万达院线、新影联院线、比高国际等多家院线和影院提供服务，有效降低了由放映设备故障造成的维修费用和票房损失，显著提高观众满意度。
-     * imgUrlList : [{"detail_id":10,"img_id":11,"img_url":"http://p0.meituan.net/320.0.a/deal/602f0d65070e5973c85aabff0fb6c6ac60545.jpg"}]
+     * imgUrlList : [{"detail_id":10,"img_id":11,
+     * "img_url":"http://p0.meituan.net/320.0.a/deal/602f0d65070e5973c85aabff0fb6c6ac60545.jpg"}]
      * isApprove : 0
      * is_take_out : 0
      * merchant_name : 17.5影城（望城店）

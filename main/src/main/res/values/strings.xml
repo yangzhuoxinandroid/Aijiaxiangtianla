@@ -12,4 +12,16 @@
     <string name="tea">茶馆</string>
     <string name="open_time">19:00</string>
     <string name="end_time">01:00</string>
+    <string name="details">详情</string>
+    <string name="telephone">电话：</string>
+    <string name="purple">紫欣</string>
+    <string name="ren">联系人：</string>
+    <string name="square">明珠广场</string>
+    <string name="address">地址：</string>
+    <string name="time">营业时间：</string>
+    <string name="start">/人起</string>
+    <string name="five">500</string>
+    <string name="squre">人均：</string>
+    <string name="dianhua">电话</string>
+    <string name="handup">举报</string>
 </resources>
