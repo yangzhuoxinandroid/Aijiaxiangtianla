@@ -40,6 +40,8 @@ public class MainActivity extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       // getActionBar().hide();  //去掉标题栏
+
         setContentView(R.layout.activity_main);
 
         LayoutInflater inflater =LayoutInflater.from(this);

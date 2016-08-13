@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:orientation="vertical"
-    tools:context="com.example.administrator.mine.MyxiugaimmActivity">
+    tools:context="com.example.administrator.mine.MywjmmActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="44dp"
@@ -43,7 +43,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="8.0"
             android:gravity="center_vertical"
-            android:text="旧密码:"
+            android:text="手机号码:"
             android:textColor="@android:color/black"
             android:textSize="16.0dip" />
 
@@ -54,12 +54,13 @@
             android:gravity="center_vertical">
 
             <EditText
-                android:id="@+id/xgmm_jiumima"
+                android:id="@+id/edt_forget_phone"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:layout_toLeftOf="@+id/layout_register_send_code"
                 android:background="@android:color/transparent"
                 android:gravity="center_vertical"
-                android:hint="请输入旧密码"
+                android:hint="11位手机号码"
                 android:inputType="number"
                 android:paddingLeft="10.0dip"
                 android:textSize="16.0dip" />
@@ -72,12 +73,13 @@
                 android:padding="5dp"
                 android:gravity="center_vertical">
 
-                <TextView
-                    android:id="@+id/xgmm_wangjimima"
+                <Button
+                    android:id="@+id/btn_forget_send_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="忘记密码"
-                    android:textColor="@color/beijin_lv"
+                    android:background="@drawable/btn_small_green"
+                    android:text="获取验证码"
+                    android:textColor="@android:color/white"
                     android:textSize="16.0dip" />
             </LinearLayout>
         </RelativeLayout>
@@ -97,52 +99,23 @@
             android:layout_height="fill_parent"
             android:layout_weight="8.0"
             android:gravity="center_vertical"
-            android:text="新密码:"
+            android:text="手机验证码:"
             android:textColor="@android:color/black"
             android:textSize="16.0dip" />
 
         <EditText
-            android:id="@+id/xgmm_xinmima"
+            android:id="@+id/edt_forget_phone_code"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="3.0"
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
-            android:hint="请输入新密码"
-            android:inputType="textPassword"
+            android:hint="请输入验证码"
+            android:inputType="number"
             android:paddingLeft="10.0dip"
             android:textSize="16.0dip" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="50.0dip"
-        android:layout_marginTop="1.0dip"
-        android:background="@android:color/white"
-        android:orientation="horizontal"
-        android:paddingLeft="10.0dip"
-        android:paddingRight="10.0dip">
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="8.0"
-            android:gravity="center_vertical"
-            android:text="确认密码:"
-            android:textColor="@android:color/black"
-            android:textSize="16.0dip" />
-
-        <EditText
-            android:id="@+id/xgmm_querenmima"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="3.0"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:hint="再次输入新密码"
-            android:inputType="textPassword"
-            android:paddingLeft="10.0dip"
-            android:textSize="16.0dip" />
-    </LinearLayout>
     <Button
         android:id="@+id/btn_forget_password_get_password"
         android:layout_width="fill_parent"
@@ -151,7 +124,7 @@
         android:layout_marginRight="10.0dip"
         android:layout_marginTop="30.0dip"
         android:background="@drawable/btn_large_green"
-        android:text="确认修改"
+        android:text="获取登录密码"
         android:textColor="@android:color/white"
         android:textSize="16.0dip" />
 </LinearLayout>
