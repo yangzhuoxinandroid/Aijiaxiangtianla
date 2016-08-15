@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroud"
+    tools:context="com.example.lovehome.FindShopActivity">
+
+    <!-- 1111111111111111111111111-->
+    <LinearLayout
+        android:background="@color/green"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_white_left"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/left" />
+
+        <LinearLayout
+            android:id="@+id/write_shopName"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_shape"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+            <EditText
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/gray"
+                android:background="@null"
+                android:maxLength="10"
+                android:hint="@string/write_shopName" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/clock"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"/>
+    </LinearLayout>
+
+    <!--22222222222222222222-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/LinearLayout_beautiful"
+           android:onClick="OnePopWindowClick"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/beautiful"
+                android:textSize="20dp"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beautiful"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:id="@+id/down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/down"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LinearLayout_allShop"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allShop"
+            android:textColor="@color/black"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/down"/>
+        </LinearLayout>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_marginTop="2dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+    <ListView
+        android:id="@+id/listview_writeShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>
+
+    <!-- android:visibility="gone" 设置控件消失(有3种方法)-->
+    <TextView
+        android:id="@+id/tv_bg"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

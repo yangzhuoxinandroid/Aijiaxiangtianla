@@ -40,15 +40,15 @@ public void queryInformation( Callback.CommonCallback<String> callback){
     x.http().get(params,callback);
 }
 
+    //2.获取父分类信息
+    public void getFatherInformation( Callback.CommonCallback<String> callback){
+        //http://123.206.87.139/LoveHomeTownServer/printCategory
+        String path="http://123.206.87.139/LoveHomeTownServer/printCategory";
+        RequestParams params=new RequestParams(path);
+        x.http().get(params,callback);
+    }
 
 
-//    public void getHomeData(String token, Callback.CommonCallback<String> callback){
-//        //http://139.196.196.64:8080/edsm/service/getSurveyList?pageSize=10&page=1
-//        String path="http://139.196.196.64:8080/edsm/service/getSurveyList?pageSize=10&page=1";
-//        RequestParams params=new RequestParams(path);
-//        params.addHeader("token",token);
-//        x.http().get(params,callback);
-//    }
 
 
 

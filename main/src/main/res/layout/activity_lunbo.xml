@@ -11,7 +11,7 @@
         android:background="@color/green"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/two_cityName"
             android:onClick="CityOnclick"
@@ -28,6 +28,7 @@
                 android:textColor="@color/white"
                 android:textSize="20dp" />
             <ImageView
+                android:id="@+id/ic_white_down"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -35,7 +36,11 @@
                 android:src="@drawable/ic_white_down" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/find_shop"
+            android:clickable="true"
             android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/home_shape"
@@ -44,18 +49,21 @@
             android:orientation="horizontal" >
             <EditText
                 android:gravity="center_vertical"
-                android:padding="5dp"
-                android:textSize="18dp"
+                android:padding="8dp"
+                android:textSize="16dp"
                 android:layout_weight="1"
-                android:layout_width="170dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="15dp"
-                android:drawableLeft="@drawable/ic_search"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:textColor="@color/gray"
+                android:drawableLeft="@drawable/ic_serach"
                 android:background="@null"
-                android:maxLength="10"
+                android:focusable="false"
                 android:hint="@string/find" />
         </LinearLayout>
         <ImageView
+            android:id="@+id/clock"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
@@ -140,7 +148,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:onClick="TwoOnclick"
             android:id="@+id/OldPeople"
             android:layout_weight="1"
             android:background="@color/white"
@@ -173,7 +180,6 @@
         </LinearLayout>
 <!--444444444444444444444444444444444444444444-->
         <LinearLayout
-            android:onClick="TwoOnclick"
             android:id="@+id/outgoing_food"
             android:layout_marginLeft="1dp"
             android:layout_weight="1"

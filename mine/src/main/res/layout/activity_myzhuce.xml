@@ -193,7 +193,6 @@
             android:id="@+id/check_agreement"
             android:layout_width="28.0dip"
             android:layout_height="28.0dip"
-            android:button="@drawable/checkbox_selecotr"
             android:checked="true" />
 
         <TextView
