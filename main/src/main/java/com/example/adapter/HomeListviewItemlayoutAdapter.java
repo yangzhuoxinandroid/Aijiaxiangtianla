@@ -1,41 +1,43 @@
 package com.example.adapter;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.entity.ListItemEntity;
+import com.example.entity.CategoryEntity;
+import com.example.entity.ListViewEntity;
 import com.example.lovehome.R;
+
+import org.xutils.x;
 
 public class HomeListviewItemlayoutAdapter extends BaseAdapter {
 
-    private List<ListItemEntity> objects;
+    private List<ListViewEntity.ListBean> like;
 
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public HomeListviewItemlayoutAdapter(Context context,List<ListItemEntity> objects) {
+    public HomeListviewItemlayoutAdapter(Context context,List<ListViewEntity.ListBean> like) {
         this.context = context;
-        this.objects=objects;
+        this.like=like;
         this.layoutInflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        return objects.size();
+        Log.i("like的长度", ""+like.size());
+        return like.size();
     }
 
     @Override
-    public ListItemEntity getItem(int position) {
-        return objects.get(position);
+    public ListViewEntity.ListBean getItem(int position) {
+        return like.get(position);
     }
 
     @Override
@@ -49,16 +51,24 @@ public class HomeListviewItemlayoutAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.home_listview_itemlayout, null);
             convertView.setTag(new ViewHolder(convertView));
         }
-        initializeViews((ListItemEntity)getItem(position), (ViewHolder) convertView.getTag());
+        initializeViews((ListViewEntity.ListBean)getItem(position), (ViewHolder) convertView.getTag());
         return convertView;
     }
 
-    private void initializeViews(ListItemEntity object, ViewHolder holder) {
+    private void initializeViews(ListViewEntity.ListBean object, ViewHolder holder) {
         //TODO implement
+        ListViewEntity.ListBean.ImgUrlListBean imgUrlListBean=new ListViewEntity.ListBean.ImgUrlListBean();
+        x.image().bind( holder.listviewItemImg,imgUrlListBean.getImg_url());
+        holder.listviewItemTextview.setText(object.getMerchant_name());
+        holder.listviewItemMoney.setText(object.getPer_capita_consumption());
+        holder.listviewItemAddress.setText(object.getBusiness_location());
+        if(object.getChild_category_id()==11){
+            CategoryEntity.ListBean.ChildCategoryListBean childCategoryListBean=new CategoryEntity.ListBean.ChildCategoryListBean();
+            holder.itemAddress.setText(childCategoryListBean.getChild_category_name());
+        }
     }
 
     protected class ViewHolder {
-    private LinearLayout listviewItemLinearLayout;
     private ImageView listviewItemImg;
     private TextView listviewItemTextview;
     private TextView listviewItemMoney;
@@ -69,7 +79,6 @@ public class HomeListviewItemlayoutAdapter extends BaseAdapter {
     private TextView endTime;
 
         public ViewHolder(View view) {
-            listviewItemLinearLayout = (LinearLayout) view.findViewById(R.id.listview_item_LinearLayout);
             listviewItemImg = (ImageView) view.findViewById(R.id.listview_item_Img);
             listviewItemTextview = (TextView) view.findViewById(R.id.listview_item_textview);
             listviewItemMoney = (TextView) view.findViewById(R.id.listview_item_money);

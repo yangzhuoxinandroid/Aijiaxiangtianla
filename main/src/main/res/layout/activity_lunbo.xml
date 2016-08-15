@@ -4,21 +4,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/gray"
-    tools:context="com.example.activity.LunboActivity">
+    android:background="@color/backgroud">
+
+    <!-- 1111111111111111111111111-->
+    <LinearLayout
+        android:background="@color/green"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <LinearLayout
+            android:id="@+id/two_cityName"
+            android:onClick="CityOnclick"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/changsha"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_white_down" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_shape"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+            <EditText
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:layout_width="170dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_search"
+                android:background="@null"
+                android:maxLength="10"
+                android:hint="@string/find" />
+        </LinearLayout>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clock"/>
+    </LinearLayout>
+
+    <!--22222222222222222222222-->
+    <RelativeLayout
+        android:layout_marginTop="1dp"
+        android:id="@+id/RelativeLayout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="120dp" >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vg_ViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </android.support.v4.view.ViewPager>
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/text01"
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="1" />
+            <TextView
+                android:id="@+id/text02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--3333333333333333333333333333-->
 
     <RelativeLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="120dp">
+        android:paddingTop="5dp"
+        android:layout_height="100dp">
         <android.support.v4.view.ViewPager
             android:id="@+id/vp_home_top"
             android:layout_height="wrap_content"
             android:layout_width="match_parent" />
     </RelativeLayout>
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:gravity="center">
@@ -36,6 +135,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -71,11 +171,11 @@
                 android:layout_height="60dp"
                 android:src="@drawable/waimai"/>
         </LinearLayout>
-<!--2-->
+<!--444444444444444444444444444444444444444444-->
         <LinearLayout
             android:onClick="TwoOnclick"
             android:id="@+id/outgoing_food"
-            android:layout_marginLeft="3dp"
+            android:layout_marginLeft="1dp"
             android:layout_weight="1"
             android:background="@color/white"
             android:orientation="horizontal"
@@ -113,6 +213,7 @@
     android:layout_height="wrap_content"
     android:textSize="16dp"
     android:padding="5dp"
+    android:textColor="@color/gray_one"
     android:text="老乡推荐"/>
 
 
