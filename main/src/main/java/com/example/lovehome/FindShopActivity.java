@@ -63,7 +63,7 @@ public class FindShopActivity extends AppCompatActivity {
             }
         };
 
-        setItemClick();
+//        setItemClick();
         setReturn();
     }
 
@@ -103,15 +103,15 @@ public class FindShopActivity extends AppCompatActivity {
         });
     }
 
-    public void setItemClick(){
-        listview_writeShop.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent=new Intent(FindShopActivity.this,DetailsActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
+//    public void setItemClick(){
+//        listview_writeShop.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent=new Intent(FindShopActivity.this,DetailsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//    }
 
 
     //设置泡泡窗口
