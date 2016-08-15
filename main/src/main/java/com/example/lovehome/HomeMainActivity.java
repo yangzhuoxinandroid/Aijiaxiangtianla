@@ -53,8 +53,6 @@ public class HomeMainActivity extends AppCompatActivity {
     ListViewEntity listViewEntity;
     ImageView clock, down;
     TextView beautiful;
-    List<CategoryEntity.ListBean> categoryEntities;
-    CategoryEntity categoryEntity;
     GridView gv;
 
     @Override
@@ -360,6 +358,8 @@ public class HomeMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeMainActivity.this, FindShopActivity.class);
+                beautiful.setText("外卖汇");
+                down.setVisibility(View.GONE);
                 startActivity(intent);
                 HomeMainActivity.this.finish();
             }
@@ -370,30 +370,9 @@ public class HomeMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeMainActivity.this, FindShopActivity.class);
                 startActivity(intent);
+                beautiful.setText("老乡会");
+                down.setVisibility(View.GONE);
                 HomeMainActivity.this.finish();
-                categoryEntities = new ArrayList<CategoryEntity.ListBean>();
-//                HttpContext httpContext = HttpContext.getInstance();
-//                httpContext.queryInformation(new Callback.CommonCallback<String>() {
-//                    @Override
-//                    public void onSuccess(String s) {
-//                        AyalsisData ayalsisData = new AyalsisData();
-//                        categoryEntity = new CategoryEntity();
-//                        categoryEntity = ayalsisData.fatherInformationData(s);
-//                        categoryEntities = categoryEntity.getList();
-//                        Log.d("FindShopActivity", "categoryEntities是否有数据：" + categoryEntities.size());
-//                    }
-//                    @Override
-//                    public void onError(Throwable throwable, boolean b) {
-//                    }
-//                    @Override
-//                    public void onCancelled(CancelledException e) {
-//                    }
-//                    @Override
-//                    public void onFinished() {
-//
-//                    }
-//
-//                });
             }
         });
 
