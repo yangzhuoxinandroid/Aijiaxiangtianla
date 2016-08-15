@@ -2,38 +2,16 @@ package com.example.administrator.aijiaxiangtianla;
 
 import android.app.TabActivity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.TranslateAnimation;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.administrator.mine.MineActivity;
+import com.example.administrator.mine.Wode.MineActivity;
 //import com.example.fragment.HomeFragment;
 import com.example.lovehome.HomeMainActivity;
-
-import java.net.InterfaceAddress;
 
 public class MainActivity extends TabActivity {
 

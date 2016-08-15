@@ -1,13 +1,15 @@
-package com.example.administrator.mine;
+package com.example.administrator.mine.Wode;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MyyhzlActivity extends AppCompatActivity {
+import com.example.administrator.mine.R;
+
+public class MyxiugaimmActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_myyhzl);
+        setContentView(R.layout.activity_myxiugaimm);
     }
 }

@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.lovehome.HomeMainActivity"></activity>
-        <activity android:name="com.example.administrator.mine.MineActivity"></activity>
+        <activity android:name="com.example.administrator.mine.Wode.MineActivity"></activity>
     </application>
 
 </manifest>

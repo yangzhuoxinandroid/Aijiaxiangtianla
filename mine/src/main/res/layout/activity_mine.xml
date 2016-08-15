@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/beijin_hui"
-    tools:context="com.example.administrator.mine.MineActivity">
+    tools:context=".Wode.MineActivity">
 
     <ScrollView
         android:layout_width="match_parent"
