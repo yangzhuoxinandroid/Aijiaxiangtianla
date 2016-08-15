@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.administrator.mine.Wode.MineActivity;
 //import com.example.fragment.HomeFragment;
+import com.example.administrator.publish.publishActivity;
 import com.example.lovehome.HomeMainActivity;
 
 public class MainActivity extends TabActivity {
@@ -34,18 +35,17 @@ public class MainActivity extends TabActivity {
         //选中的时候显示哪个界面
         t1.setContent(new Intent(this, HomeMainActivity.class));
         host.addTab(t1);
-
-//        TabHost.TabSpec t2=  host.newTabSpec("发布");//创建一个选项卡，参数：就只是一个标记没有任何意义
-//        //给文字或者图标
-//        View view2=inflater.inflate(R.layout.cone, null);
-//        TextView tv2=(TextView) view2.findViewById(R.id.TV2);
-//        tv2.setText("发布");
-//        ImageView iv2=(ImageView) view2.findViewById(R.id.TV1);
-//        iv2.setImageResource(R.drawable.fabu);
-//        t2.setIndicator(view2);
-//        //选中的时候显示哪个界面
-////        t2.setContent(new Intent(this,BusinessMainActivity.class));
-//        host.addTab(t2);
+        TabHost.TabSpec t2=  host.newTabSpec("发布");//创建一个选项卡，参数：就只是一个标记没有任何意义
+        //给文字或者图标
+        View view2=inflater.inflate(R.layout.cone, null);
+        TextView tv2=(TextView) view2.findViewById(R.id.TV2);
+        tv2.setText("发布");
+        ImageView iv2=(ImageView) view2.findViewById(R.id.TV1);
+        iv2.setImageResource(R.drawable.fabu);
+        t2.setIndicator(view2);
+        //选中的时候显示哪个界面
+        t2.setContent(new Intent(this,publishActivity.class));
+        host.addTab(t2);
 
 
         TabHost.TabSpec t3=  host.newTabSpec("我的");//创建一个选项卡，参数：就只是一个标记没有任何意义

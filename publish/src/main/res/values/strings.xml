@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">publish</string>
+    <string name="app_name">Aijiaxang</string>
+    <string name="xuanze">选择发布类型</string>
+    <string name="sjmc">商家名称：</string>
+    <string name="yysj">营业时间：</string>
+    <string name="yysj1">开始时间</string>
+    <string name="yysj2">至</string>
+    <string name="yysj3">结束时间</string>
+    <string name="rjxf">人均消费:</string>
+    <string name="rjxf1">元</string>
+    <string name="jldw">计量单位:</string>
+    <string name="jldw1">请填写计量单位（例如人、小时等）</string>
+    <string name="dz">地址：</string>
+    <string name="dz1">请填写地址</string>
+    <string name="lxr">联系人：</string>
+    <string name="lxr1">请填写联系人</string>
+    <string name="dh">电话：</string>
+    <string name="dh1">填写正确的联系方式（外地带"区号"）</string>
+    <string name="txxq">填写详情</string>
+    <string name="bccg">保存草稿</string>
+    <string name="ljfb">立即发布</string>
+    <string name="meishi9">美食-酒店</string>
 </resources>
