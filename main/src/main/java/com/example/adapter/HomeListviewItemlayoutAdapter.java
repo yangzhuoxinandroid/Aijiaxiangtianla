@@ -2,6 +2,10 @@ package com.example.adapter;
 
 import java.util.List;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,19 +23,19 @@ import org.xutils.x;
 public class HomeListviewItemlayoutAdapter extends BaseAdapter {
 
     private List<ListViewEntity.ListBean> like;
-
+    Handler handler;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public HomeListviewItemlayoutAdapter(Context context,List<ListViewEntity.ListBean> like) {
+    public HomeListviewItemlayoutAdapter(Context context,List<ListViewEntity.ListBean> like,Handler handler) {
         this.context = context;
+        this.handler=handler;
         this.like=like;
         this.layoutInflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        Log.i("like的长度", ""+like.size());
         return like.size();
     }
 
@@ -51,21 +55,29 @@ public class HomeListviewItemlayoutAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.home_listview_itemlayout, null);
             convertView.setTag(new ViewHolder(convertView));
         }
-        initializeViews((ListViewEntity.ListBean)getItem(position), (ViewHolder) convertView.getTag());
+        initializeViews((ListViewEntity.ListBean)getItem(position), (ViewHolder) convertView.getTag(),position);
         return convertView;
     }
 
-    private void initializeViews(ListViewEntity.ListBean object, ViewHolder holder) {
+    private void initializeViews(final ListViewEntity.ListBean object, ViewHolder holder, int i) {
         //TODO implement
-        ListViewEntity.ListBean.ImgUrlListBean imgUrlListBean=new ListViewEntity.ListBean.ImgUrlListBean();
-        x.image().bind( holder.listviewItemImg,imgUrlListBean.getImg_url());
+        String url="http://p0.meituan.net/320.0.a/deal/602f0d65070e5973c85aabff0fb6c6ac60545.jpg";
+        x.image().bind(holder.listviewItemImg,url);
         holder.listviewItemTextview.setText(object.getMerchant_name());
-        holder.listviewItemMoney.setText(object.getPer_capita_consumption());
+        holder.listviewItemMoney.setText("￥"+object.getPer_capita_consumption()+"/起");
         holder.listviewItemAddress.setText(object.getBusiness_location());
-        if(object.getChild_category_id()==11){
-            CategoryEntity.ListBean.ChildCategoryListBean childCategoryListBean=new CategoryEntity.ListBean.ChildCategoryListBean();
-            holder.itemAddress.setText(childCategoryListBean.getChild_category_name());
-        }
+
+        holder.imgPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Message message=new Message();
+                message.what=1;
+                message.obj=object.getPhone();
+                handler.sendMessage(message);
+            }
+        });
+
+
     }
 
     protected class ViewHolder {
