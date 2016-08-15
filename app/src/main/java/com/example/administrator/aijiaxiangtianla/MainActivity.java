@@ -2,38 +2,17 @@ package com.example.administrator.aijiaxiangtianla;
 
 import android.app.TabActivity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.TranslateAnimation;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.administrator.mine.MineActivity;
 //import com.example.fragment.HomeFragment;
+import com.example.administrator.publish.publishActivity;
 import com.example.lovehome.HomeMainActivity;
-
-import java.net.InterfaceAddress;
 
 public class MainActivity extends TabActivity {
 
@@ -56,17 +35,17 @@ public class MainActivity extends TabActivity {
         //选中的时候显示哪个界面
         t1.setContent(new Intent(this, HomeMainActivity.class));
         host.addTab(t1);
-//        TabHost.TabSpec t2=  host.newTabSpec("发布");//创建一个选项卡，参数：就只是一个标记没有任何意义
-//        //给文字或者图标
-//        View view2=inflater.inflate(R.layout.cone, null);
-//        TextView tv2=(TextView) view2.findViewById(R.id.TV2);
-//        tv2.setText("发布");
-//        ImageView iv2=(ImageView) view2.findViewById(R.id.TV1);
-//        iv2.setImageResource(R.drawable.fabu);
-//        t2.setIndicator(view2);
-//        //选中的时候显示哪个界面
-////        t2.setContent(new Intent(this,BusinessMainActivity.class));
-//        host.addTab(t2);
+        TabHost.TabSpec t2=  host.newTabSpec("发布");//创建一个选项卡，参数：就只是一个标记没有任何意义
+        //给文字或者图标
+        View view2=inflater.inflate(R.layout.cone, null);
+        TextView tv2=(TextView) view2.findViewById(R.id.TV2);
+        tv2.setText("发布");
+        ImageView iv2=(ImageView) view2.findViewById(R.id.TV1);
+        iv2.setImageResource(R.drawable.fabu);
+        t2.setIndicator(view2);
+        //选中的时候显示哪个界面
+        t2.setContent(new Intent(this,publishActivity.class));
+        host.addTab(t2);
 
 
         TabHost.TabSpec t3=  host.newTabSpec("我的");//创建一个选项卡，参数：就只是一个标记没有任何意义

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="luse">#53c679</color>
+    <color name="baise">#ffffff</color>
+    <color name="heise">#000000</color>
+    <color name="huise">#f0f0f0</color>
+    <color name="huise1">#e0e0e0</color>
+</resources>
